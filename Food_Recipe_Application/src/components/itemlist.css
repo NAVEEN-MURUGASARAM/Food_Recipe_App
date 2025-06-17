@@ -1,0 +1,30 @@
+.view-recipe-btn{
+    background-color: green;
+    color: white;
+    height: 40px;
+    padding: 10px;
+    border: 0;
+    border-radius: 20px;
+    font-family: monospace;
+    cursor: pointer;
+    text-align: center;
+    transition: 500ms;
+    text-decoration: none;
+}
+.view-recipe-btn:hover{
+    background-color: #33b937;
+    height: 45px;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+}
+.Favorites-btn{
+    border:0;
+    font-size: 30px;
+    margin-left: 100px;
+    cursor: pointer;
+    transition: 500ms;
+    border-radius: 30px;
+}
+.Favorites-btn:hover{
+    font-size: 35px;
+}

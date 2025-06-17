@@ -1,0 +1,38 @@
+.search-input{
+    height: 30px;
+    border-radius: 20px;
+    border: 0;
+    padding: 20px;
+    width: 250px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+    outline: 0;
+    transition: 500ms;
+}
+.search-input:focus{
+    box-shadow:0 0 5px rgb(255, 0, 0);
+}
+.submit-btn {
+  border: none;
+  font-size: 1.4rem;
+  margin-top: 10px;
+  margin-left: 30px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 20px;
+  padding: 5px;
+  width: 50px;
+  background-color: #63c867;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #34a93a;
+}
+
+.nav1:hover,.nav2:hover{
+  background-color: #63c867;
+  transition: 2ms;
+  border-radius: 20px;
+  height: 30px;
+}
