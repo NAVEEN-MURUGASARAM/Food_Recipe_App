@@ -38,7 +38,7 @@ const Details = () => {
           <div>
           <h2>Description:</h2>
           {details.ingredients?.map((item, index) => (
-            <p style={{padding:"10px"}}>
+            <p style={{padding:"10px"}} key={index}>
               {index+1 +")"} {item.description}
             </p>
           ))}

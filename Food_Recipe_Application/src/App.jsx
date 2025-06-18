@@ -11,6 +11,7 @@ function App() {
   const [search, setSearch] = useState("pizza");
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [favoritesList, setFavoritesList] = useState([]);
 
   async function handle(event) {
     setLoading(true); // Set loading to true when the request starts
@@ -52,15 +53,26 @@ function App() {
   const location = useLocation();
   return (
     <>
-      {location.pathname === "/" && (
-        <>
-          <Navbar search={search} setSearch={setSearch} handle={handle} />
-          <ItemList search={search} loading={loading} items={items} />
-        </>
-      )}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Favorites" element={<Favorites />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar search={search} setSearch={setSearch} handle={handle} />,
+              <ItemList
+                search={search}
+                loading={loading}
+                items={items}
+                setFavoritesList={setFavoritesList}
+                favoritesList={favoritesList}
+              />
+            </>
+          }
+        />
+        <Route
+          path="/favorites"
+          element={<Favorites favoritesList={favoritesList} setFavoritesList={setFavoritesList}/>}
+        />
         <Route path="/recipe-item/:id" element={<Details />} />
       </Routes>
     </>

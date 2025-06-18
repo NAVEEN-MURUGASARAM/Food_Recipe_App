@@ -6,7 +6,7 @@ import Search from "./Search";
 import Details from "./Details";
 import "./search.css"
 
-const Navbar = ({setSearch , handle}) => {
+const Navbar = ({search ,setSearch , handle}) => {
   return (
     <div>
       <div
@@ -28,7 +28,7 @@ const Navbar = ({setSearch , handle}) => {
         >
           FoodRecipe😋
         </h3>
-        <Search SetSearch={setSearch} handle={handle}/>
+        <Search search={search} SetSearch={setSearch} handle={handle}/>
         <nav
           style={{
             fontFamily: "monospace",

@@ -4,10 +4,11 @@ import "./itemlist.css";
 import Swal from 'sweetalert2'
 import {Link} from 'react-router-dom'
 
-const ItemList = ({ search, loading, items }) => {
+const ItemList = ({ search, loading, items,setFavoritesList,favoritesList }) => {
+  
   
 
-  function handleFavorite() {
+  function handleFavorite(item) {
     let timerInterval;
       Swal.fire({
         html: "Adding to Favorites!",
@@ -20,6 +21,7 @@ const ItemList = ({ search, loading, items }) => {
           clearInterval(timerInterval);
         },
       });
+      setFavoritesList([...(favoritesList || []),item]);
   }
   return (
     <div style={{ textAlign: "center", padding: "10px" }}>
@@ -77,7 +79,7 @@ const ItemList = ({ search, loading, items }) => {
                   }}
                 >
                   <Link to={`recipe-item/${item?.id}`} className="view-recipe-btn">View Recipes</Link>
-                  <button className="Favorites-btn" onClick={handleFavorite}>
+                  <button className="Favorites-btn" onClick={()=>handleFavorite(item)}>
                     💟
                   </button>
                 </div>
